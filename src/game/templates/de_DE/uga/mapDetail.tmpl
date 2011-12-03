@@ -20,6 +20,7 @@
       <li><img src="{{ gfx }}/de_DE/t_uga/map/{{ cave_details.terrain_img }}" alt="{{ cave_details.terrain_name }}" title="{{ cave_details.terrain_name }}" /></li>
       <li><a href="main.php?modus={{ unit_movement_link }}&amp;targetXCoord={{ cave_details.xCoord }}&amp;targetYCoord={{ cave_details.yCoord }}&amp;targetCaveName={{ cave_details.name }}">dorthin bewegen!</a></li>
       <li><a href="main.php?modus={{ cave_bookmarks_link }}&amp;task=Add&amp;xCoord={{ cave_details.xCoord }}&amp;yCoord={{ cave_details.yCoord }}">zur Höhlenliste hinzufügen!</a></li>
+      <li><a href="main.php?modus=map&amp;xCoord={{ cave_details.xCoord }}&amp;yCoord={{ cave_details.yCoord }}">auf der Karte anzeigen!</a></li>
       <li>&nbsp;</li>
       {% if cave_details.playerID %}
         <li>Diese Höhle gehört dem Häuptling <a href="main.php?modus={{ player_detail_link }}&amp;detailID={{ player_details.playerID }}"><span class="bold">{{ player_details.name }}</span></a>{% if player_details.tribe %} vom Stamme <a href="main.php?modus={{ tribe_detail_link }}&amp;tribe={{ player_details.tribe|url_encode }}"><span class="bold">{{ player_details.tribe }}</span></a>{% endif %}.</li>
